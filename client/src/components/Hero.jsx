@@ -1,0 +1,90 @@
+const Hero = () => {
+  return (
+    <section className="hero section" id="home">
+      {/* Background Effects */}
+      <div className="hero-bg">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+      </div>
+      <div className="hero-grid"></div>
+
+      <div className="container">
+        <div className="hero-content">
+          <div className="hero-badge">
+            <span className="badge-dot"></span>
+            Crafting Digital Excellence
+          </div>
+
+          <h1 className="hero-title">
+            We Build Websites<br />
+            <span className="gradient-text">With Purpose</span>
+          </h1>
+
+          <p className="hero-description">
+            We're not just another web agency. We craft high-performance,
+            beautifully designed digital experiences that drive real results
+            for ambitious brands and startups.
+          </p>
+
+          <div className="hero-buttons">
+            <a href="#portfolio" className="btn btn-primary">
+              View Our Work ↗
+            </a>
+            <a href="#contact" className="btn btn-outline">
+              Start a Project
+            </a>
+          </div>
+
+          <div className="hero-stats">
+            <div className="hero-stat">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Projects Delivered</div>
+            </div>
+            <div className="hero-stat">
+              <div className="stat-number">98%</div>
+              <div className="stat-label">Client Satisfaction</div>
+            </div>
+            <div className="hero-stat">
+              <div className="stat-number">3+</div>
+              <div className="stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-visual">
+          <div className="hero-illustration">
+            <div className="center-ring"></div>
+            <div className="center-ring inner-ring"></div>
+
+            <div className="floating-card card-1">
+              <div className="card-icon">🎨</div>
+              <div className="card-text">
+                <h4>UI/UX Design</h4>
+                <p>Pixel-perfect interfaces</p>
+              </div>
+            </div>
+
+            <div className="floating-card card-2">
+              <div className="card-icon">⚡</div>
+              <div className="card-text">
+                <h4>Fast Performance</h4>
+                <p>Sub-second load times</p>
+              </div>
+            </div>
+
+            <div className="floating-card card-3">
+              <div className="card-icon">📱</div>
+              <div className="card-text">
+                <h4>Responsive</h4>
+                <p>Works on all devices</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
