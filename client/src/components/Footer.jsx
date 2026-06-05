@@ -42,7 +42,7 @@ const Footer = () => {
               Built with Purpose
             </div>
             <p>
-              We craft high-performance, beautifully designed digital 
+              We craft high-performance, beautifully designed digital
               experiences that drive real results for ambitious brands.
             </p>
             <div className="footer-social">
@@ -89,8 +89,8 @@ const Footer = () => {
             <h4>Contact</h4>
             <ul>
               <li><a href="mailto:hello@builtwithpurpose.com">hello@builtwithpurpose.com</a></li>
-              <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
-              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>San Francisco, CA</a></li>
+              <li><a href="tel:+15551234567">+91 98422 62***</a></li>
+              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>Singanallur, CBE-005 </a></li>
             </ul>
           </div>
         </div>

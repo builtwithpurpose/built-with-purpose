@@ -1,7 +1,7 @@
 const Team = () => {
   const team = [
     {
-      name: 'Alex Johnson',
+      name: 'Kishore R',
       role: 'Founder & CEO',
       initials: 'AJ',
       socials: {
@@ -11,7 +11,7 @@ const Team = () => {
       },
     },
     {
-      name: 'Maya Chen',
+      name: 'Janagiraman',
       role: 'Lead Designer',
       initials: 'MC',
       socials: {
@@ -21,7 +21,7 @@ const Team = () => {
       },
     },
     {
-      name: 'David Park',
+      name: 'Aakash S',
       role: 'Full-Stack Developer',
       initials: 'DP',
       socials: {
@@ -31,7 +31,7 @@ const Team = () => {
       },
     },
     {
-      name: 'Lisa Wang',
+      name: 'Sujitha',
       role: 'Marketing Lead',
       initials: 'LW',
       socials: {
@@ -59,7 +59,7 @@ const Team = () => {
             Meet the <span className="gradient-text">Creators</span>
           </h2>
           <p className="section-subtitle">
-            A passionate team of designers, developers, and strategists 
+            A passionate team of designers, developers, and strategists
             committed to building exceptional digital experiences.
           </p>
         </div>

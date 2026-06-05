@@ -45,9 +45,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: '📍', title: 'Location', detail: 'San Francisco, CA, USA' },
+    { icon: '📍', title: 'Location', detail: 'Singanallur,CBE-005' },
     { icon: '📧', title: 'Email', detail: 'hello@builtwithpurpose.com' },
-    { icon: '📞', title: 'Phone', detail: '+1 (555) 123-4567' },
+    { icon: '📞', title: 'Phone', detail: '+91 98422 62***' },
   ];
 
   const socialLinks = [
@@ -67,7 +67,7 @@ const Contact = () => {
             Let's Build Something <span className="gradient-text">Amazing</span>
           </h2>
           <p className="section-subtitle">
-            Have a project in mind? We'd love to hear about it. 
+            Have a project in mind? We'd love to hear about it.
             Send us a message and let's start the conversation.
           </p>
         </div>
@@ -76,8 +76,8 @@ const Contact = () => {
           <div className="contact-info">
             <h3>Let's Connect</h3>
             <p>
-              Whether you have a question, a project idea, or just want to say 
-              hello — our inbox is always open. We typically respond within 
+              Whether you have a question, a project idea, or just want to say
+              hello — our inbox is always open. We typically respond within
               24 hours.
             </p>
 
