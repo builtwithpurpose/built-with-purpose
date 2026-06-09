@@ -3,7 +3,7 @@ const Team = () => {
     {
       name: 'Kishore R',
       role: 'Founder & CEO',
-      initials: 'AJ',
+      initials: 'KR',
       socials: {
         twitter: 'https://twitter.com',
         linkedin: 'https://linkedin.com',
@@ -13,7 +13,7 @@ const Team = () => {
     {
       name: 'Janagiraman',
       role: 'Lead Designer',
-      initials: 'MC',
+      initials: 'JR',
       socials: {
         twitter: 'https://twitter.com',
         linkedin: 'https://linkedin.com',
@@ -23,7 +23,7 @@ const Team = () => {
     {
       name: 'Aakash S',
       role: 'Full-Stack Developer',
-      initials: 'DP',
+      initials: 'AS',
       socials: {
         twitter: 'https://twitter.com',
         linkedin: 'https://linkedin.com',
@@ -33,7 +33,7 @@ const Team = () => {
     {
       name: 'Sujitha',
       role: 'Marketing Lead',
-      initials: 'LW',
+      initials: 'SJ',
       socials: {
         twitter: 'https://twitter.com',
         linkedin: 'https://linkedin.com',
