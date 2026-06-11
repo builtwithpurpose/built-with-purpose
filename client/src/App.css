@@ -509,46 +509,100 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .service-card {
-  padding: 40px 32px;
+  background: rgba(21, 22, 29, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-lg);
+  padding: 48px 36px;
   text-align: center;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, rgba(var(--theme-rgb), 0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-card * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(var(--theme-rgb), 0.35);
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.8), 
+    0 0 30px rgba(var(--theme-rgb), 0.1);
+  background: rgba(var(--theme-rgb), 0.015);
 }
 
 .service-card .service-icon {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 24px;
-  border-radius: var(--radius-md);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  transition: var(--transition-normal);
+  background: transparent !important;
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.service-card:nth-child(1) .service-icon { background: rgba(var(--primary-rgb), 0.15); }
-.service-card:nth-child(2) .service-icon { background: rgba(var(--secondary-rgb), 0.15); }
-.service-card:nth-child(3) .service-icon { background: rgba(var(--accent-rgb), 0.15); }
-.service-card:nth-child(4) .service-icon { background: rgba(var(--primary-rgb), 0.15); }
-.service-card:nth-child(5) .service-icon { background: rgba(var(--secondary-rgb), 0.15); }
-.service-card:nth-child(6) .service-icon { background: rgba(var(--accent-rgb), 0.15); }
+.service-card .service-icon svg {
+  width: 52px;
+  height: 52px;
+  color: var(--text-primary);
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
 
 .service-card:hover .service-icon {
-  transform: scale(1.1);
+  transform: translateY(-4px) scale(1.08);
+}
+
+.service-card:hover .service-icon svg {
+  color: rgb(var(--theme-rgb));
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(var(--theme-rgb), 0.6));
 }
 
 .service-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.2rem;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: rgb(var(--theme-rgb));
 }
 
 .service-card p {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover p {
+  color: var(--text-primary);
 }
 
 /* ===== PORTFOLIO ===== */
