@@ -56,4 +56,4 @@ All mockup data (team names, projects, testimonials, contact info, social links)
 
 ## 📬 Contact Form
 The contact form submits to the Express.js API (`POST /api/contact`) and stores submissions in MongoDB. Make sure MongoDB is running for the form to work.
-jana add collaboration 
+jana add collaboration
