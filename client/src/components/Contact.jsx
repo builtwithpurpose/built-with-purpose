@@ -46,8 +46,8 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: '📍', title: 'Location', detail: 'Singanallur,CBE-005' },
-    { icon: '📧', title: 'Email', detail: 'hello@builtwithpurpose.com' },
-    { icon: '📞', title: 'Phone', detail: '+91 98422 62***' },
+    { icon: '📧', title: 'Email', detail: 'builtwithpurposein@gmail.com' },
+    { icon: '📞', title: 'Phone', detail: '+91 98422 62888' },
   ];
 
   const socialLinks = [

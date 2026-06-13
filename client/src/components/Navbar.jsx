@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,8 +30,13 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="container">
         <a href="#home" className="nav-logo" onClick={(e) => handleNavClick(e, '#home')}>
-          <img src={logo} alt="Built with Purpose Logo" className="logo-icon" />
-          Built with Purpose
+          <div className="logo-text">
+            <span className="logo-built">BUILT</span>
+            <div className="logo-sub">
+              <span className="logo-with">with</span>
+              <span className="logo-purpose">purpose</span>
+            </div>
+          </div>
         </a>
 
         <ul className={`nav-links ${mobileOpen ? 'open' : ''}`}>

@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,8 +38,13 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src={logo} alt="Built with Purpose Logo" className="logo-icon" />
-              Built with Purpose
+              <div className="logo-text">
+                <span className="logo-built">BUILT</span>
+                <div className="logo-sub">
+                  <span className="logo-with">with</span>
+                  <span className="logo-purpose">purpose</span>
+                </div>
+              </div>
             </div>
             <p>
               We craft high-performance, beautifully designed digital
@@ -88,7 +93,7 @@ const Footer = () => {
           <div className="footer-column">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:hello@builtwithpurpose.com">hello@builtwithpurpose.com</a></li>
+              <li><a href="mailto:[builtwithpurposein@gmail.com]">builtwithpurposein@gmail.com</a></li>
               <li><a href="tel:+15551234567">+91 98422 62***</a></li>
               <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')}>Singanallur, CBE-005 </a></li>
             </ul>

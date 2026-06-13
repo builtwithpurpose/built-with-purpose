@@ -11,13 +11,10 @@ const Hero = () => {
 
       <div className="container">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-dot"></span>
-            Crafting Digital Excellence
-          </div>
+
 
           <h1 className="hero-title">
-            We Build Websites<br />
+            Grow your Business<br />
             <span className="gradient-text">With Purpose</span>
           </h1>
 

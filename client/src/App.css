@@ -26,31 +26,63 @@
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
 }
 
-.nav-logo .logo-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
+/* ===== TEXT LOGO (replicates the built.png brand mark) ===== */
+.logo-text {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  gap: 1px;
 }
 
-.nav-logo div.logo-icon {
-  background: var(--gradient-primary);
+.logo-text .logo-built {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.55rem;
+  color: #F5C518;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
-.nav-logo img.logo-icon {
-  object-fit: contain;
+.logo-text .logo-sub {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  line-height: 1;
 }
+
+.logo-text .logo-with {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.65rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+.logo-text .logo-purpose {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+  letter-spacing: 0px;
+  line-height: 1;
+}
+
+/* Footer logo variant — slightly larger */
+.footer-logo .logo-text .logo-built {
+  font-size: 1.75rem;
+}
+
+.footer-logo .logo-text .logo-purpose {
+  font-size: 1.25rem;
+}
+
 
 .nav-links {
   display: flex;
