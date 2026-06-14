@@ -1,6 +1,20 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+// ─── EmailJS Configuration ───────────────────────────────────────────────────
+// 1. Sign up at https://www.emailjs.com (free tier: 200 emails/month)
+// 2. Create an Email Service (Gmail, Outlook, etc.) → copy the Service ID
+// 3. Create an Email Template → copy the Template ID
+//    Map template variables: {{from_name}}, {{from_email}}, {{subject}}, {{message}}
+// 4. Go to Account → API Keys → copy your Public Key
+// Replace the placeholder strings below with your actual credentials:
+const EMAILJS_SERVICE_ID = 'service_xsdjkfd';   // e.g. 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'template_l3cww95';  // e.g. 'template_xyz789'
+const EMAILJS_PUBLIC_KEY = 'VkA1103v4-IFLy0wx';   // e.g. 'abcDEFghiJKL012'
+// ─────────────────────────────────────────────────────────────────────────────
 
 const Contact = () => {
+  const formRef = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,24 +34,23 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      );
+
+      setStatus({
+        type: 'success',
+        message: "🎉 Message sent successfully! We'll get back to you within 24 hours.",
       });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setStatus({ type: 'success', message: data.message });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setStatus({ type: 'error', message: data.message });
-      }
-    } catch {
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS error:', error);
       setStatus({
         type: 'error',
-        message: 'Unable to connect to the server. Please try again later.',
+        message: 'Something went wrong. Please try again or email us directly.',
       });
     } finally {
       setLoading(false);
@@ -113,17 +126,17 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={handleSubmit} id="contact-form">
+            <form className="contact-form" onSubmit={handleSubmit} id="contact-form" ref={formRef}>
               <div className="form-row">
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="from_name"
                     placeholder="John Doe"
                     value={formData.name}
-                    onChange={handleChange}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
                   />
                 </div>
@@ -132,10 +145,10 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="from_email"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={handleChange}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
                   />
                 </div>
