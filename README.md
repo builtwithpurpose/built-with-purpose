@@ -39,4 +39,6 @@ portfolio/
 - **Design**: Glassmorphism, CSS animations, responsive
 
 
-## new mail created and addede 
+## new mail created and added.
+production must will be explicitly promoted by the builtwithpurpose github only.
+
