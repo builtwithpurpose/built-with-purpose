@@ -16,7 +16,7 @@ const team = [
   },
   {
     name: 'Janagiraman',
-    role: 'Lead Designer',
+    role: 'SEO Specialist',
     initials: 'JR',
     socials: {
       twitter: 'https://twitter.com',

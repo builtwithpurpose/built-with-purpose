@@ -48,37 +48,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        <div className="hero-visual">
-          <div className="hero-illustration">
-            <div className="center-ring"></div>
-            <div className="center-ring inner-ring"></div>
-
-            <div className="floating-card card-1">
-              <div className="card-icon">🎨</div>
-              <div className="card-text">
-                <h4>UI/UX Design</h4>
-                <p>Pixel-perfect interfaces</p>
-              </div>
-            </div>
-
-            <div className="floating-card card-2">
-              <div className="card-icon">⚡</div>
-              <div className="card-text">
-                <h4>Fast Performance</h4>
-                <p>Sub-second load times</p>
-              </div>
-            </div>
-
-            <div className="floating-card card-3">
-              <div className="card-icon">📱</div>
-              <div className="card-text">
-                <h4>Responsive</h4>
-                <p>Works on all devices</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -81,31 +81,30 @@ function MindPanel({ active, onEnter, onLeave, onClick }) {
       <div className={`ab2-expanded ${isExpanded ? 'ab2-expanded--visible' : ''}`}>
         <span className="ab2-eyebrow ab2-eyebrow--sm">About Us</span>
         <h3 className="ab2-expand-title">
-          Turning Ideas Into{' '}
-          <span className="gradient-text">Digital Reality</span>
+          Crafting Identities,{' '}
+          <span className="gradient-text">Driving Growth</span>
         </h3>
 
         <p className="ab2-expand-body">
-          Founded with a singular mission — to build digital products that are
-          both visually stunning and strategically crafted to achieve real
-          business outcomes. Every pixel and every line of code serves a purpose.
+          Founded with a singular mission — to build digital brands that command
+          attention and are strategically designed to connect with your target audience.
+          From memorable branding to authority content, every design and word serves a purpose.
         </p>
         <p className="ab2-expand-body">
-          We partner with startups, agencies, and ambitious businesses to create
-          digital experiences that captivate users and convert visitors into
-          loyal customers.
+          We partner with ambitious startups and businesses to tell their stories, build
+          loyal communities, and turn search intent into measurable business growth.
         </p>
 
         {/* Stat counters */}
         <div className="ab2-stats-row">
-          <StatCounter value="7"  label="Team Members"   trigger={counted} />
-          <StatCounter value="15" label="Happy Clients"   trigger={counted} />
-          <StatCounter value="20" label="Projects Done"   trigger={counted} />
+          <StatCounter value="7"  label="Experts"         trigger={counted} />
+          <StatCounter value="15" label="Brands Scaled"   trigger={counted} />
+          <StatCounter value="30" label="Campaigns Run"   trigger={counted} />
         </div>
 
         {/* Minimal tag pills */}
         <div className="ab2-pills">
-          {['Strategy', 'Design', 'Brand Identity', 'UX Research', 'Storytelling'].map((t) => (
+          {['SEO Strategy', 'Social Media', 'Paid Ads', 'Branding & Design', 'Content Marketing'].map((t) => (
             <span key={t} className="ab2-pill">{t}</span>
           ))}
         </div>
@@ -130,18 +129,18 @@ function EnginePanel({ active, onEnter, onLeave, onClick }) {
   const pillars = [
     {
       icon: '⬡',
-      title: 'Scalable Architecture',
-      desc: 'Systems built to grow — from MVP to millions of users.',
+      title: 'Paid Social Advertising',
+      desc: 'Targeted, high-converting ad funnels on Meta & Google Ads that turn clicks into revenue.',
     },
     {
       icon: '◈',
-      title: 'Clean Code',
-      desc: 'Readable, tested, maintainable code as a first-class concern.',
+      title: 'Social Media Marketing',
+      desc: 'Organic growth, consistent feed aesthetics, and brand authority across all channels.',
     },
     {
       icon: '↻',
-      title: 'Agile Development',
-      desc: 'Short sprints, rapid iterations, and continuous delivery.',
+      title: 'Conversion-Focused Web Dev',
+      desc: 'Fast, SEO-optimized landing pages and applications designed to convert traffic.',
     },
   ];
 
@@ -162,7 +161,7 @@ function EnginePanel({ active, onEnter, onLeave, onClick }) {
       <div className={`ab2-initial ${isExpanded ? 'ab2-initial--hidden' : ''}`}>
         <span className="ab2-eyebrow ab2-eyebrow--right">02</span>
         <h2 className="ab2-panel-heading ab2-panel-heading--right">The<br />Engine</h2>
-        <p className="ab2-panel-sub">The Engineering Philosophy</p>
+        <p className="ab2-panel-sub">The Performance Philosophy</p>
 
         {/* code snippet preview */}
         <div className="ab2-code-preview">
@@ -170,13 +169,13 @@ function EnginePanel({ active, onEnter, onLeave, onClick }) {
             <span className="ab2-code-dot" style={{ background: '#ff5f57' }} />
             <span className="ab2-code-dot" style={{ background: '#ffbd2e' }} />
             <span className="ab2-code-dot" style={{ background: '#28c840' }} />
-            <span className="ab2-code-filename">index.tsx</span>
+            <span className="ab2-code-filename">scale.js</span>
           </div>
           <pre className="ab2-code-body">{
-`const build = async (idea) => {
-  const design   = await craft(idea);
-  const product  = await engineer(design);
-  return ship(product); // ✦ always
+`const scale = async (brand) => {
+  const targetAudience = await analyze(brand);
+  const adsCampaigns   = await launchAds(targetAudience);
+  return maximizeROI(adsCampaigns); // ✦ always
 };`}
           </pre>
         </div>
@@ -184,9 +183,9 @@ function EnginePanel({ active, onEnter, onLeave, onClick }) {
 
       {/* ── EXPANDED content ── */}
       <div className={`ab2-expanded ${isExpanded ? 'ab2-expanded--visible' : ''}`}>
-        <span className="ab2-eyebrow ab2-eyebrow--sm">How We Build</span>
+        <span className="ab2-eyebrow ab2-eyebrow--sm">How We Scale</span>
         <h3 className="ab2-expand-title">
-          Engineering With{' '}
+          Scaling With{' '}
           <span className="gradient-text">Purpose</span>
         </h3>
 
@@ -208,7 +207,7 @@ function EnginePanel({ active, onEnter, onLeave, onClick }) {
 
         {/* Tech stack pills */}
         <div className="ab2-pills ab2-pills--engine">
-          {['React', 'Next.js', 'Node.js', 'PostgreSQL', 'MongoDB', 'Firebase', 'React Native', 'TypeScript'].map((t) => (
+          {['Meta Ads', 'Google Ads', 'SEO Tools', 'Next.js', 'Google Analytics', 'Figma', 'Copywriting', 'E-commerce'].map((t) => (
             <span key={t} className="ab2-pill ab2-pill--code">{t}</span>
           ))}
         </div>

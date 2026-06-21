@@ -12,11 +12,12 @@ const Footer = () => {
   ];
 
   const serviceLinks = [
-    { label: 'Web Development', href: '#services' },
-    { label: 'Mobile Apps', href: '#services' },
-    { label: 'UI/UX Design', href: '#services' },
-    { label: 'E-Commerce', href: '#services' },
-    { label: 'SEO & Marketing', href: '#services' },
+    { label: 'Search Engine Optimization (SEO)', href: '#services' },
+    { label: 'Social Media Marketing', href: '#services' },
+    { label: 'Paid Social Advertising', href: '#services' },
+    { label: 'Branding & Graphic Design', href: '#services' },
+    { label: 'Content Marketing', href: '#services' },
+    { label: 'Web & App Development', href: '#services' },
   ];
 
   const socialLinks = [
@@ -47,8 +48,8 @@ const Footer = () => {
               </div>
             </div>
             <p>
-              We craft high-performance, beautifully designed digital
-              experiences that drive real results for ambitious brands.
+              We scale brands and accelerate growth through high-ROI digital marketing,
+              stunning creative design, and search engine domination.
             </p>
             <div className="footer-social">
               {socialLinks.map((social, index) => (

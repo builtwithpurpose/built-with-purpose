@@ -77,11 +77,11 @@ const Contact = () => {
         <div className="section-header">
           <div className="section-label">Get In Touch</div>
           <h2 className="section-title">
-            Let's Build Something <span className="gradient-text">Amazing</span>
+            Let's Scale Your <span className="gradient-text">Brand</span>
           </h2>
           <p className="section-subtitle">
-            Have a project in mind? We'd love to hear about it.
-            Send us a message and let's start the conversation.
+            Ready to dominate search results and scale your ROI? 
+            Send us a message to request your free digital marketing and brand audit.
           </p>
         </div>
 

@@ -1,38 +1,38 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 /* ─────────────────────────────────────────────
    Data
-───────────────────────────────────────────── */
+   ───────────────────────────────────────────── */
 const products = [
   {
     id: 'finova',
-    category: 'Fintech · Analytics',
-    title: 'Finova Dashboard',
+    category: 'SEO & Paid Search',
+    title: 'Finova Ads Scaling',
     description:
-      'A comprehensive real-time analytics platform built for modern fintech teams. Monitor portfolio performance, track live market signals, and generate intelligent reports — all from a single, cohesive interface.',
-    tags: ['React', 'Node.js', 'MongoDB'],
+      'A high-performance paid ads scaling strategy built for modern fintech teams. Optimize marketing funnels, monitor cost-per-acquisition in real-time, track conversion signals, and scale budget ROAS from a single campaign dashboard.',
+    tags: ['Meta Ads', 'Google Ads', 'Paid Funnels'],
     accentVar: '--primary',
     accentRgbVar: '--primary-rgb',
     mockup: 'fintech',
   },
   {
     id: 'shopease',
-    category: 'E-Commerce · Retail',
-    title: 'ShopEase Store',
+    category: 'E-Commerce · Organic Growth',
+    title: 'ShopEase SEO Campaign',
     description:
-      'A next-generation storefront experience with advanced faceted search, seamless checkout flows, and native Stripe integration. Designed to convert browsers into loyal customers at every touchpoint.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
+      'A next-generation search engine optimization campaign resulting in massive organic visibility. Developed with technical SEO audits, keyword research, semantic copywriting, and backlink networks to drive organic sales.',
+    tags: ['SEO Audit', 'Content Strategy', 'Backlinks'],
     accentVar: '--secondary',
     accentRgbVar: '--secondary-rgb',
     mockup: 'ecommerce',
   },
   {
     id: 'travelgo',
-    category: 'Travel · Mobile',
-    title: 'TravelGo App',
+    category: 'Branding & Social media',
+    title: 'TravelGo Brand Identity',
     description:
-      'An immersive travel companion that blends interactive maps with AI-powered itinerary planning. Book flights, hotels, and experiences in one smooth, native-feeling mobile interface.',
-    tags: ['React Native', 'Firebase', 'Maps API'],
+      'A premium visual identity reboot and Instagram aesthetic map. Combined with targeted social media content, audience demographics research, and high-impact social ads to launch TravelGo as a leading lifestyle brand.',
+    tags: ['Brand Logo Design', 'Aesthetic Mapping', 'Social Ads'],
     accentVar: '--accent',
     accentRgbVar: '--accent-rgb',
     mockup: 'travel',
@@ -41,7 +41,7 @@ const products = [
 
 /* ─────────────────────────────────────────────
    Dashboard Mockup Components
-───────────────────────────────────────────── */
+   ───────────────────────────────────────────── */
 
 function FinovaMockup() {
   return (
@@ -51,20 +51,20 @@ function FinovaMockup() {
         <span className="chrome-dot chrome-dot--red" />
         <span className="chrome-dot chrome-dot--yellow" />
         <span className="chrome-dot chrome-dot--green" />
-        <span className="chrome-title">Finova · Dashboard</span>
+        <span className="chrome-title">Finova · Ads Dashboard</span>
       </div>
 
       {/* Top stat row */}
       <div className="mockup-stats-row">
         {[
-          { label: 'Total Revenue', value: '$2.4M', delta: '+12.5%', up: true },
-          { label: 'Active Users', value: '18,320', delta: '+8.2%', up: true },
-          { label: 'Churn Rate', value: '1.4%', delta: '-0.3%', up: false },
+          { label: 'Ad Spend', value: '$45K', delta: '+12.5%', up: true },
+          { label: 'CPA (Average)', value: '$18.50', delta: '-24.3%', up: false },
+          { label: 'Campaign ROAS', value: '4.2x', delta: '+8.2%', up: true },
         ].map((s) => (
           <div key={s.label} className="mockup-stat-pill">
             <span className="msp-label">{s.label}</span>
             <span className="msp-value">{s.value}</span>
-            <span className={`msp-delta ${s.up ? 'up' : 'down'}`}>{s.delta}</span>
+            <span className={`msp-delta ${!s.up && s.label.includes('CPA') ? 'up' : s.up ? 'up' : 'down'}`}>{s.delta}</span>
           </div>
         ))}
       </div>
@@ -91,7 +91,7 @@ function FinovaMockup() {
           />
         </svg>
         <div className="chart-labels">
-          {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'].map((m) => (
+          {['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'].map((m) => (
             <span key={m} className="chart-label">{m}</span>
           ))}
         </div>
@@ -100,9 +100,9 @@ function FinovaMockup() {
       {/* Activity feed */}
       <div className="mockup-feed">
         {[
-          { icon: '↑', text: 'Deposit from Stripe · $4,200', time: '2m ago' },
-          { icon: '↓', text: 'AWS Infrastructure · $890', time: '14m ago' },
-          { icon: '↑', text: 'Enterprise plan renewal · $12k', time: '1h ago' },
+          { icon: '↑', text: 'Conversion from Meta Ads · $18.50', time: '2m ago' },
+          { icon: '↓', text: 'Ad spend daily cap optimized', time: '14m ago' },
+          { icon: '↑', text: 'Google Search click leads to booking', time: '1h ago' },
         ].map((item, i) => (
           <div key={i} className="feed-row">
             <span className={`feed-icon ${item.icon === '↑' ? 'feed-icon--up' : 'feed-icon--down'}`}>{item.icon}</span>
@@ -116,10 +116,10 @@ function FinovaMockup() {
 }
 
 function EcommerceMockup() {
-  const products2 = [
-    { name: 'Leather Tote', price: '$149', status: 'In Stock', stars: 5 },
-    { name: 'Canvas Sneakers', price: '$89', status: 'Low Stock', stars: 4 },
-    { name: 'Merino Sweater', price: '$199', status: 'In Stock', stars: 5 },
+  const keywords = [
+    { name: 'Leather Tote Bags', pos: 'Pos #2', status: '+4 spots', green: true },
+    { name: 'Canvas Sneakers', pos: 'Pos #5', status: '+8 spots', green: true },
+    { name: 'Merino Wool Sweater', pos: 'Pos #1', status: 'Stable', green: true },
   ];
   return (
     <div className="mockup-shell">
@@ -127,42 +127,42 @@ function EcommerceMockup() {
         <span className="chrome-dot chrome-dot--red" />
         <span className="chrome-dot chrome-dot--yellow" />
         <span className="chrome-dot chrome-dot--green" />
-        <span className="chrome-title">ShopEase · Storefront</span>
+        <span className="chrome-title">ShopEase · Keyword Ranks</span>
       </div>
 
       {/* Search bar */}
       <div className="mockup-search-bar">
         <span className="search-icon">⌕</span>
-        <span className="search-placeholder">Search products, categories…</span>
+        <span className="search-placeholder">Search tracked keywords...</span>
         <span className="search-badge">⌘K</span>
       </div>
 
       {/* Filter chips */}
       <div className="mockup-filter-chips">
-        {['All', 'Bags', 'Footwear', 'Apparel', 'Sale'].map((f, i) => (
+        {['All', 'Primary Keywords', 'Competitors', 'Rankings'].map((f, i) => (
           <span key={f} className={`filter-chip ${i === 0 ? 'filter-chip--active' : ''}`}>{f}</span>
         ))}
       </div>
 
       {/* Product table */}
       <div className="mockup-product-list">
-        {products2.map((p, i) => (
+        {keywords.map((k, i) => (
           <div key={i} className="product-row">
             <div className="product-thumb" style={{ background: `rgba(var(--secondary-rgb), ${0.1 + i * 0.05})` }} />
             <div className="product-meta">
-              <span className="product-name">{p.name}</span>
-              <span className="product-stars">{'★'.repeat(p.stars)}</span>
+              <span className="product-name">{k.name}</span>
+              <span className="product-stars">{'★'.repeat(5)}</span>
             </div>
-            <span className="product-price">{p.price}</span>
-            <span className={`product-status ${p.status === 'In Stock' ? 'status--in' : 'status--low'}`}>{p.status}</span>
+            <span className="product-price" style={{ color: 'var(--secondary)' }}>{k.pos}</span>
+            <span className={`product-status status--in`}>{k.status}</span>
           </div>
         ))}
       </div>
 
       {/* CTA row */}
       <div className="mockup-cta-row">
-        <div className="cta-mini-btn">Add to Cart</div>
-        <div className="cta-mini-btn cta-mini-btn--outline">Wishlist</div>
+        <div className="cta-mini-btn">Keyword Planner</div>
+        <div className="cta-mini-btn cta-mini-btn--outline">SEO Audit Report</div>
       </div>
     </div>
   );
@@ -175,7 +175,7 @@ function TravelMockup() {
         <span className="chrome-dot chrome-dot--red" />
         <span className="chrome-dot chrome-dot--yellow" />
         <span className="chrome-dot chrome-dot--green" />
-        <span className="chrome-title">TravelGo · Plan Trip</span>
+        <span className="chrome-title">TravelGo · Audience Reach</span>
       </div>
 
       {/* Map placeholder */}
@@ -201,17 +201,17 @@ function TravelMockup() {
           <circle cx="160" cy="60" r="4" fill="var(--primary)" opacity="0.8" />
           <circle cx="260" cy="20" r="5" fill="var(--secondary)" opacity="0.9" />
         </svg>
-        <div className="map-pin map-pin--1">📍 NYC</div>
-        <div className="map-pin map-pin--2">📍 London</div>
-        <div className="map-pin map-pin--3">📍 Tokyo</div>
+        <div className="map-pin map-pin--1">📍 US Reach: 1.2M</div>
+        <div className="map-pin map-pin--2">📍 UK Reach: 450K</div>
+        <div className="map-pin map-pin--3">📍 JP Reach: 800K</div>
       </div>
 
       {/* Itinerary */}
       <div className="mockup-itinerary">
         {[
-          { day: 'Day 1', city: 'New York → London', flight: 'AA 102 · 7h 20m', status: 'Confirmed' },
-          { day: 'Day 4', city: 'London → Tokyo', flight: 'JL 044 · 12h 05m', status: 'Confirmed' },
-          { day: 'Day 9', city: 'Tokyo → NYC', flight: 'NH 010 · 14h 00m', status: 'Pending' },
+          { day: 'Phase 1', city: 'Brand Identity Design', flight: 'Logo, Color Palette, Brand Book', status: 'Completed' },
+          { day: 'Phase 2', city: 'Social Grid & Content', flight: 'Aesthetics, Creative Templates', status: 'Completed' },
+          { day: 'Phase 3', city: 'Growth Ads Launch', flight: 'Meta & TikTok Conversion Campaigns', status: 'Active' },
         ].map((leg, i) => (
           <div key={i} className="itinerary-row">
             <div className="itinerary-day">{leg.day}</div>
@@ -219,7 +219,7 @@ function TravelMockup() {
               <span className="itinerary-city">{leg.city}</span>
               <span className="itinerary-flight">{leg.flight}</span>
             </div>
-            <span className={`itinerary-status ${leg.status === 'Confirmed' ? 'status--confirmed' : 'status--pending'}`}>{leg.status}</span>
+            <span className={`itinerary-status ${leg.status === 'Completed' ? 'status--confirmed' : 'status--pending'}`}>{leg.status}</span>
           </div>
         ))}
       </div>
@@ -235,7 +235,7 @@ const mockupMap = {
 
 /* ─────────────────────────────────────────────
    Product Row
-───────────────────────────────────────────── */
+   ───────────────────────────────────────────── */
 function ProductRow({ product, index }) {
   const rowRef = useRef(null);
   const isReversed = index % 2 !== 0;
@@ -287,8 +287,8 @@ function ProductRow({ product, index }) {
           ))}
         </div>
         <div className="fp-actions">
-          <a href="#" className="fp-btn fp-btn--primary">View Case Study →</a>
-          <a href="#" className="fp-btn fp-btn--ghost">Source Code</a>
+          <a href="#contact" className="fp-btn fp-btn--primary">View Case Study →</a>
+          <a href="#contact" className="fp-btn fp-btn--ghost">Get Free Brand Audit</a>
         </div>
       </div>
     </div>
@@ -297,7 +297,7 @@ function ProductRow({ product, index }) {
 
 /* ─────────────────────────────────────────────
    Main Section
-───────────────────────────────────────────── */
+   ───────────────────────────────────────────── */
 const Portfolio = () => {
   return (
     <section className="featured-products section" id="portfolio">
@@ -309,11 +309,11 @@ const Portfolio = () => {
         <div className="section-header">
           <div className="section-label">Our Work</div>
           <h2 className="section-title">
-            Featured <span className="gradient-text">Products</span>
+            Featured <span className="gradient-text">Case Studies</span>
           </h2>
           <p className="section-subtitle">
-            A showcase of our finest craft — from complex fintech dashboards to
-            immersive mobile experiences.
+            A showcase of our finest growth campaigns — from dominating search results to
+            scaling paid acquisition funnels and brand identities.
           </p>
         </div>
       </div>

@@ -225,13 +225,21 @@
 .hero .container {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 .hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   animation: fadeInUp 0.8s ease forwards;
 }
 
@@ -265,22 +273,24 @@
 .hero-description {
   font-size: 1.15rem;
   margin-bottom: 36px;
-  max-width: 520px;
+  max-width: 680px;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 48px;
 }
 
 .hero-stats {
   display: flex;
+  justify-content: center;
   gap: 40px;
 }
 
 .hero-stat {
-  text-align: left;
+  text-align: center;
 }
 
 .hero-stat .stat-number {

@@ -1,21 +1,21 @@
 const Testimonials = () => {
   const testimonials = [
     {
-      text: "Built with Purpose transformed our online presence completely. Their team delivered a stunning website that exceeded our expectations and doubled our conversion rate within three months.",
+      text: "BuiltWithPurpose scaled our customer acquisition efforts. Their targeted paid social campaigns drove a 340% increase in fintech signups while cutting our Cost-Per-Acquisition by 24% within three months.",
       name: 'Sarah Mitchell',
       role: 'CEO, Finova Solutions',
       initials: 'SM',
       stars: 5,
     },
     {
-      text: "Working with this team was an absolute pleasure. They understood our vision from day one and translated it into a beautiful, functional e-commerce platform that our customers love.",
+      text: "Our organic traffic has exploded. Thanks to their technical SEO audit and semantic content strategy, we ranked on page 1 for our primary search terms and doubled our e-commerce sales.",
       name: 'James Rodriguez',
       role: 'Founder, ShopEase',
       initials: 'JR',
       stars: 5,
     },
     {
-      text: "The attention to detail and technical expertise is outstanding. They didn't just build us a website — they built us a growth engine. Highly recommend for any serious business.",
+      text: "They completely revitalized our visual brand identity and mapped out a high-converting social media grid. They didn't just design assets — they built a social community that drives revenue.",
       name: 'Priya Sharma',
       role: 'Marketing Head, GreenLeaf',
       initials: 'PS',

@@ -3,22 +3,22 @@
 /* ===== CSS VARIABLES ===== */
 :root {
   /* Colors */
-  --primary: #E6C79C;
-  /* Champagne Gold */
-  --primary-light: #F3DFBF;
-  --primary-dark: #C79F6E;
-  --primary-rgb: 230, 199, 156;
+  --primary: #5227FF;
+  /* Electric Purple */
+  --primary-light: #8F75FF;
+  --primary-dark: #2C00D6;
+  --primary-rgb: 82, 39, 255;
 
-  --secondary: #C17F6A;
-  /* Warm Terracotta / Rust */
-  --secondary-light: #D29886;
-  --secondary-dark: #A56450;
-  --secondary-rgb: 193, 127, 106;
+  --secondary: #FF9FFC;
+  /* Neon Pink / Lavender */
+  --secondary-light: #FFC2FD;
+  --secondary-dark: #CC6EC8;
+  --secondary-rgb: 255, 159, 252;
 
-  --accent: #99A98F;
-  /* Sage Green */
-  --accent-light: #B2C8AD;
-  --accent-rgb: 153, 169, 143;
+  --accent: #B497CF;
+  /* Muted Violet */
+  --accent-light: #D9C8EA;
+  --accent-rgb: 180, 151, 207;
 
   /* Backgrounds */
   --bg-dark: #0B0C10;

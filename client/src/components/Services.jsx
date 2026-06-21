@@ -3,58 +3,27 @@ const Services = () => {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M8 3.5H7.5C6.1 3.5 5 4.6 5 6v4.5c0 .8-.5 1.5-1.2 1.8.7.3 1.2 1 1.2 1.8V18c0 1.4 1.1 2.5 2.5 2.5H8" />
-          <path d="M16 3.5h.5c1.4 0 2.5 1.1 2.5 2.5v4.5c0 .8.5 1.5 1.2 1.8-.7.3-1.2 1-1.2 1.8V18c0 1.4-1.1 2.5-2.5 2.5H16" />
-          <path d="M10.5 9.5L8.5 12l2 2.5" />
-          <path d="M13.5 9.5l2 2.5-2 2.5" />
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+          <path d="M11 7v8M8 12h6" />
         </svg>
       ),
-      title: 'Web Development',
-      description: 'Full-stack web applications built with modern frameworks like React, Next.js, and Node.js. Fast, secure, and scalable.',
+      title: 'Search Engine Optimization (SEO)',
+      description: 'Dominate search results, acquire high-intent organic traffic, and scale your leads without recurring ad spend.',
       themeRgb: '230, 199, 156', // Champagne Gold
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="6" y="2" width="12" height="20" rx="3" />
-          <path d="M10 5h4" />
-          <path d="M11 19h2" />
-          <path d="M10 14.5l2-6.5 2 6.5" />
-          <path d="M10.8 12.5h2.4" />
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       ),
-      title: 'Mobile Apps',
-      description: 'Cross-platform mobile applications using React Native. Native performance with a single codebase for iOS and Android.',
+      title: 'Social Media Marketing',
+      description: 'Build a thriving community, establish brand authority, and maintain stunning feed aesthetics across platforms.',
       themeRgb: '193, 127, 106', // Warm Terracotta / Rust
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="15" rx="2" />
-          <path d="M3 8h18" />
-          <circle cx="5.5" cy="6" r="0.5" fill="currentColor" />
-          <circle cx="7.5" cy="6" r="0.5" fill="currentColor" />
-          <circle cx="9.5" cy="6" r="0.5" fill="currentColor" />
-          <path d="M9 8v11" />
-          <path d="M9 13.5h12" />
-          <path d="M14 14l6 1.8-2.2 1.6 2.8 4.2-1.4 0.9-2.8-4.2-2.4 2.1z" />
-        </svg>
-      ),
-      title: 'UI/UX Design',
-      description: 'User-centered design that balances aesthetics with functionality. From wireframes to high-fidelity prototypes.',
-      themeRgb: '153, 169, 143', // Sage Green
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 4h3l2.5 9h9l2-6H8.2" />
-          <circle cx="10.5" cy="17.5" r="1.5" />
-          <circle cx="15.5" cy="17.5" r="1.5" />
-        </svg>
-      ),
-      title: 'E-Commerce',
-      description: 'Custom online stores with seamless checkout, inventory management, and payment integration that drive sales.',
-      themeRgb: '230, 199, 156', // Champagne Gold
     },
     {
       icon: (
@@ -67,20 +36,44 @@ const Services = () => {
           <path d="M15.5 4h4v4" />
         </svg>
       ),
-      title: 'SEO & Marketing',
-      description: 'Data-driven SEO strategies and digital marketing campaigns that boost visibility and drive organic growth.',
+      title: 'Paid Social Advertising',
+      description: 'Scale your revenue fast with high-performance, conversion-optimized campaigns on Meta Ads, Google Ads, and TikTok.',
+      themeRgb: '153, 169, 143', // Sage Green
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12c0 1.94.78 3.8 2.2 5.2.5.5.5 1.3 0 1.8a1.3 1.3 0 0 1-1.8 0c-1.5-1.5-2.4-3.5-2.4-6 0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10c-1.5 0-3-.5-4-1.5-.5-.5-1.3-.5-1.8 0a1.3 1.3 0 0 1 0 1.8c1 1 2.5 1.7 4 1.7Z" />
+          <circle cx="7.5" cy="10.5" r="1.5" />
+          <circle cx="11.5" cy="7.5" r="1.5" />
+          <circle cx="16.5" cy="9.5" r="1.5" />
+        </svg>
+      ),
+      title: 'Branding & Graphic Design',
+      description: 'Establish a memorable identity. We craft premium logos, visual brand books, marketing collaterals, and ad creatives.',
+      themeRgb: '230, 199, 156', // Champagne Gold
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          <path d="M8 7h8M8 11h5" />
+        </svg>
+      ),
+      title: 'Content Marketing',
+      description: 'Engage and nurture your prospects with authority copywriting, blog strategy, email marketing funnels, and lead magnets.',
       themeRgb: '193, 127, 106', // Warm Terracotta / Rust
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 18a4 4 0 0 1 0-8h.5a6 6 0 0 1 11.5 0h.5a4 4 0 0 1 0 8z" />
-          <circle cx="12.25" cy="14" r="2" />
-          <path d="M12.25 10.5v1.5M12.25 16v1.5M8.75 14h1.5M14.25 14h1.5M9.75 11.5l1.06 1.06M13.69 15.44l1.06 1.06M9.75 16.5l1.06-1.06M13.69 12.56l1.06-1.06" />
+          <path d="m18 16 4-4-4-4" />
+          <path d="m6 8-4 4 4 4" />
+          <path d="m14.5 4-5 16" />
         </svg>
       ),
-      title: 'Cloud & DevOps',
-      description: 'Cloud infrastructure setup, CI/CD pipelines, and deployment automation for reliable, scalable applications.',
+      title: 'Web & App Development',
+      description: 'High-performance, search-optimized web applications and landing pages designed specifically to load fast and drive conversions.',
       themeRgb: '153, 169, 143', // Sage Green
     },
   ];
@@ -94,8 +87,8 @@ const Services = () => {
             Services That <span className="gradient-text">Drive Growth</span>
           </h2>
           <p className="section-subtitle">
-            From concept to launch, we offer end-to-end digital solutions 
-            tailored to your unique business needs.
+            From strategic brand planning to high-ROI campaigns, we offer comprehensive 
+            growth and digital marketing solutions tailored to your business goals.
           </p>
         </div>
 
