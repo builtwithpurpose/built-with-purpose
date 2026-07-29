@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, CheckCircle } from 'lucide-react';
+import { ArrowRight, Play, Rocket, BarChart3, Clock } from 'lucide-react';
 
 const Hero = () => {
   const floatAnimation = {
@@ -12,12 +12,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden" id="home">
-      {/* Background Blurs */}
+    <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-gradient-to-br from-white to-blue-50/50" id="home">
+      {/* Background Subtle Abstract Shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-primary/20 blur-[120px] mix-blend-multiply" />
-        <div className="absolute top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-secondary/20 blur-[120px] mix-blend-multiply" />
-        <div className="absolute -bottom-[20%] left-[20%] w-[40%] h-[40%] rounded-full bg-accent/20 blur-[120px] mix-blend-multiply" />
+        <div className="absolute top-[10%] -left-[5%] w-[40%] h-[40%] rounded-full bg-blue-400/10 blur-[100px]" />
+        <div className="absolute top-[30%] -right-[10%] w-[50%] h-[50%] rounded-[100px] rotate-45 bg-blue-300/10 blur-[120px]" />
+        <div className="absolute -bottom-[20%] left-[20%] w-[60%] h-[40%] rounded-full bg-indigo-300/10 blur-[100px]" />
       </div>
 
       <div className="container mx-auto px-6 max-w-7xl">
@@ -30,14 +30,14 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start gap-8 z-10"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 border border-border/50 backdrop-blur-md shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-              <span className="text-sm font-medium text-text">Award-Winning Web Studio</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-blue-100 backdrop-blur-md shadow-sm">
+              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+              <span className="text-sm font-medium text-text">Premium Web Studio</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight text-text">
-              Grow your Business <br className="hidden md:block" />
-              <span className="text-gradient">With Purpose</span>
+              Build Websites That <br className="hidden md:block" />
+              <span className="text-gradient">Grow Your Business</span>
             </h1>
             
             <p className="text-lg md:text-xl text-secondary-text max-w-lg leading-relaxed">
@@ -45,86 +45,92 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <a href="#portfolio" className="group flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-button font-semibold shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300">
+              <a href="#portfolio" className="group flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-button font-semibold shadow-[0_8px_30px_rgb(37,99,235,0.3)] hover:shadow-[0_12px_40px_rgb(37,99,235,0.4)] hover:-translate-y-1 transition-all duration-300">
                 View Our Work
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#contact" className="flex items-center justify-center gap-2 bg-white text-text border border-border px-8 py-4 rounded-full font-button font-semibold shadow-sm hover:border-primary hover:bg-primary/5 transition-all duration-300">
-                <Play size={18} />
+              <a href="#contact" className="group flex items-center justify-center gap-2 bg-white text-text border border-border px-8 py-4 rounded-full font-button font-semibold shadow-sm hover:border-primary/30 hover:bg-primary/5 hover:-translate-y-1 transition-all duration-300">
+                <Play size={18} className="text-primary group-hover:scale-110 transition-transform" />
                 Start a Project
               </a>
             </div>
 
-            <div className="flex items-center gap-6 pt-4 border-t border-border/50 w-full">
+            <div className="flex items-center gap-6 pt-4 border-t border-border/50 w-full mt-2">
               <div className="flex -space-x-4">
                 {[1, 2, 3, 4].map((i) => (
                   <img key={i} src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" />
                 ))}
               </div>
               <div className="text-sm text-secondary-text font-medium">
-                <span className="text-text font-bold block">Trusted by 20+</span>
+                <span className="text-text font-bold block">Trusted by 50+</span>
                 Growing companies
               </div>
             </div>
           </motion.div>
 
-          {/* Right Content - Mockups */}
+          {/* Right Content - Mockup & Stats */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative h-[500px] lg:h-[600px] w-full z-10"
+            className="relative h-[500px] lg:h-[600px] w-full z-10 flex items-center justify-center"
           >
-            {/* Main Laptop Mockup */}
+            {/* Main Laptop Mockup Image */}
             <motion.div 
               animate={floatAnimation}
-              className="absolute top-10 right-0 w-[90%] md:w-[80%] rounded-2xl bg-white p-2 shadow-2xl border border-white/40 backdrop-blur-xl z-20"
+              className="relative w-[95%] md:w-[90%] z-20"
             >
-              <div className="rounded-xl overflow-hidden bg-background aspect-[16/10] relative">
-                {/* Mockup Top Bar */}
-                <div className="w-full h-6 bg-border/30 flex items-center px-3 gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                </div>
-                {/* Mockup Body Content */}
-                <div className="p-4 flex flex-col gap-4">
-                  <div className="w-full h-8 bg-border/20 rounded-md"></div>
-                  <div className="flex gap-4">
-                    <div className="w-1/3 h-24 bg-primary/10 rounded-lg"></div>
-                    <div className="w-2/3 h-24 bg-border/20 rounded-lg"></div>
-                  </div>
-                  <div className="w-full h-32 bg-border/10 rounded-lg"></div>
-                </div>
-              </div>
+              <img 
+                src="/laptop-mockup.png" 
+                alt="Premium Laptop Mockup" 
+                className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+              />
             </motion.div>
 
-            {/* Floating Card 1 */}
+            {/* Floating Card 1: 50+ Projects */}
             <motion.div 
               animate={{ y: [10, -10, 10], transition: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute bottom-20 -left-10 w-64 glass-card p-4 z-30"
+              className="absolute top-12 -left-4 md:-left-8 w-48 glass-card p-4 z-30"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent">
-                  <CheckCircle size={24} />
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <Rocket size={24} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-text">98% Satisfaction</div>
-                  <div className="text-xs text-secondary-text">Client success rate</div>
+                  <div className="text-lg font-bold text-text">50+</div>
+                  <div className="text-xs text-secondary-text font-medium">Projects Delivered</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Floating Card 2 */}
+            {/* Floating Card 2: SEO Optimised */}
             <motion.div 
               animate={{ y: [-15, 15, -15], transition: { duration: 7, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute -top-4 right-10 w-48 glass-card p-4 z-10"
+              className="absolute bottom-24 -right-4 md:-right-8 w-52 glass-card p-4 z-30"
             >
-              <div className="flex flex-col gap-2">
-                <div className="text-2xl font-bold text-primary">2.5x</div>
-                <div className="text-xs font-medium text-secondary-text">Average Revenue Growth</div>
-                <div className="w-full h-1.5 bg-border rounded-full overflow-hidden mt-1">
-                  <div className="w-[85%] h-full bg-gradient-to-r from-primary to-secondary"></div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                  <BarChart3 size={24} />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-text">SEO Optimised</div>
+                  <div className="text-xs text-secondary-text font-medium">Rank higher naturally</div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating Card 3: Fast Delivery */}
+            <motion.div 
+              animate={{ y: [12, -12, 12], transition: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
+              className="absolute -bottom-2 left-10 md:left-20 w-48 glass-card p-4 z-30"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                  <Clock size={24} />
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-text">Fast Delivery</div>
+                  <div className="text-xs text-secondary-text font-medium">Quick turnarounds</div>
                 </div>
               </div>
             </motion.div>
