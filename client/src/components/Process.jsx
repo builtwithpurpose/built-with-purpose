@@ -1,96 +1,81 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MessageSquare, Lightbulb, Code2, Rocket } from './Icons';
-
-gsap.registerPlugin(ScrollTrigger);
-
-const steps = [
-  {
-    number: '01',
-    icon: MessageSquare,
-    title: 'Discovery & Audit',
-    description:
-      'We analyze your current traffic, organic search rankings, competitor marketing campaigns, and target audiences to map out a clear growth strategy.',
-  },
-  {
-    number: '02',
-    icon: Lightbulb,
-    title: 'Brand & Funnel Design',
-    description:
-      'Our creative team designs high-converting visual assets, builds out ad creative frameworks, and writes persuasive copywriting blueprints.',
-  },
-  {
-    number: '03',
-    icon: Code2,
-    title: 'Launch & Execution',
-    description:
-      'We launch highly targeted paid social campaigns, deploy SEO-optimized content, and set up conversion tracking architectures.',
-  },
-  {
-    number: '04',
-    icon: Rocket,
-    title: 'Optimize & Scale',
-    description:
-      'We monitor campaign performance in real-time, shifting budgets to winning creatives and scaling organic content to maximize ROI.',
-  },
-];
+import { motion } from 'framer-motion';
+import { Search, PenTool, Layout, Code2, CheckSquare, Rocket, LifeBuoy } from 'lucide-react';
 
 const Process = () => {
-  const sectionRef = useRef(null);
-  const stepsRef = useRef([]);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(stepsRef.current, {
-        opacity: 0,
-        y: 50,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none reverse',
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  const steps = [
+    { id: 1, title: 'Discovery', icon: <Search size={24} />, description: 'We start by understanding your goals, target audience, and business requirements.' },
+    { id: 2, title: 'Planning', icon: <PenTool size={24} />, description: 'Creating a strategic roadmap, site architecture, and wireframes for your project.' },
+    { id: 3, title: 'Design', icon: <Layout size={24} />, description: 'Crafting beautiful, user-centric interfaces with premium aesthetics and smooth interactions.' },
+    { id: 4, title: 'Development', icon: <Code2 size={24} />, description: 'Building robust, scalable solutions using cutting-edge modern technologies.' },
+    { id: 5, title: 'Testing', icon: <CheckSquare size={24} />, description: 'Rigorous quality assurance to ensure flawless performance across all devices.' },
+    { id: 6, title: 'Launch', icon: <Rocket size={24} />, description: 'Deploying your project to production and making it available to the world.' },
+    { id: 7, title: 'Support', icon: <LifeBuoy size={24} />, description: 'Ongoing maintenance, updates, and optimization to ensure long-term success.' },
+  ];
 
   return (
-    <section id="process" ref={sectionRef}>
-      <div className="container">
-        <div className="section-header">
-          <span className="section-label">How We Work</span>
-          <h2 className="section-title">Our Proven Process</h2>
-          <p className="section-subtitle">
-            A streamlined, transparent framework that takes your brand from audit to scale —
-            on time, within budget, and with maximum ROI.
+    <section className="py-24 bg-white overflow-hidden" id="process">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Our Process</span>
+          <h2 className="text-4xl md:text-5xl font-bold font-heading text-text mb-6">
+            How We <span className="text-gradient">Work</span>
+          </h2>
+          <p className="text-secondary-text text-lg">
+            A proven, transparent framework that takes your project from concept to launch with precision and excellence.
           </p>
         </div>
 
-        <div className="process-timeline">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
-            return (
-              <div
-                className="process-step"
-                key={index}
-                ref={(el) => (stepsRef.current[index] = el)}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Animated Vertical Line */}
+          <motion.div 
+            initial={{ height: 0 }}
+            whileInView={{ height: '100%' }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full -translate-x-1/2 hidden md:block"
+          />
+          <motion.div 
+            initial={{ height: 0 }}
+            whileInView={{ height: '100%' }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full -translate-x-1/2 md:hidden"
+          />
+
+          <div className="flex flex-col gap-12">
+            {steps.map((step, index) => (
+              <motion.div 
+                key={step.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className={`relative flex items-center md:justify-between w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               >
-                <div className="process-number">{step.number}</div>
-                <div className="process-connector"></div>
-                <div className="process-card">
-                  <Icon size={32} />
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                {/* Desktop Empty Space */}
+                <div className="hidden md:block w-5/12"></div>
+
+                {/* Center Icon */}
+                <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-background flex items-center justify-center text-primary shadow-soft z-10">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="w-full h-full rounded-full bg-primary/10 flex items-center justify-center"
+                  >
+                    {step.icon}
+                  </motion.div>
                 </div>
-              </div>
-            );
-          })}
+
+                {/* Content Card */}
+                <div className="w-full md:w-5/12 pl-24 md:pl-0">
+                  <div className={`bg-background p-6 rounded-2xl border border-border shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-1 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                    <span className="text-primary font-bold text-sm mb-2 block">Phase 0{step.id}</span>
+                    <h3 className="text-xl font-bold font-heading text-text mb-2">{step.title}</h3>
+                    <p className="text-secondary-text">{step.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
