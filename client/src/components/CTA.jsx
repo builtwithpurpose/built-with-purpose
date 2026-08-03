@@ -27,11 +27,11 @@ const CTA = () => {
               <Sparkles size={32} className="text-white" />
             </motion.div>
             
-            <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold font-heading mb-6 tracking-tight bg-gradient-to-r from-[#FFFFFF] via-[#DDD6FE] to-[#A78BFA] bg-clip-text text-transparent">
               Ready to Scale Your Brand?
             </h2>
             
-            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-[#CBD5E1] max-w-2xl mx-auto mb-10 leading-relaxed">
               Let's partner to dominate search results, captivate social audiences, and accelerate your revenue. Get in touch for a free digital marketing and brand audit.
             </p>
             
