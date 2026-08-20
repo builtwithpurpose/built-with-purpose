@@ -137,7 +137,7 @@ const Grainient = ({
     // Defer WebGL initialization until after initial paint to preserve mobile FCP & LCP
     const timer = setTimeout(() => {
       const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-      const targetDpr = isMobile ? 1.0 : Math.min(window.devicePixelRatio || 1, 1.5);
+      const targetDpr = 1.0; // Ambient background canvas does not require high DPI scaling; saving >50% GPU/main-thread work on desktop
 
       const renderer = new Renderer({
         webgl: 2,
@@ -209,12 +209,21 @@ const Grainient = ({
       let raf = 0;
       let isVisible = true;
       let isPageVisible = !document.hidden;
+      const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const t0 = performance.now();
+      let lastFrameTime = 0;
+      const targetFPS = 24; // Smooth 24 FPS target prevents main thread saturation & long tasks
+      const frameInterval = 1000 / targetFPS;
 
       const loop = t => {
-        program.uniforms.iTime.value = (t - t0) * 0.001;
-        renderer.render({ scene: mesh });
         raf = requestAnimationFrame(loop);
+        if (prefersReducedMotion) return;
+        const elapsed = t - lastFrameTime;
+        if (elapsed >= frameInterval) {
+          lastFrameTime = t - (elapsed % frameInterval);
+          program.uniforms.iTime.value = (t - t0) * 0.001;
+          renderer.render({ scene: mesh });
+        }
       };
 
       const tryStart = () => {
@@ -246,7 +255,7 @@ const Grainient = ({
         ctxMap.delete(container);
         try { container.removeChild(canvas); } catch { /* ignore */ }
       };
-    }, 150);
+    }, 600);
 
     return () => {
       clearTimeout(timer);

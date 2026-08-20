@@ -23,5 +23,12 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite];
+    will-change: background-position;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient {
+    animation: none !important;
   }
 }

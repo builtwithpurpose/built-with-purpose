@@ -324,4 +324,4 @@ const ReactDevelopment = () => {
   );
 };
 
-export default ReactDevelopment;
+export default React.memo(ReactDevelopment);
