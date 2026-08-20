@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Content */}
+          {/* Left Content with subtle entrance animation */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,19 +75,24 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Laptop Mockup & Floating Cards */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative h-[500px] lg:h-[600px] w-full z-10 flex items-center justify-center"
-          >
-            {/* Main Laptop Mockup Image */}
+          {/* Right Content - Instant paint container (No opacity:0 delay on LCP element) */}
+          <div className="relative h-[500px] lg:h-[600px] w-full z-10 flex items-center justify-center">
+            {/* Main Laptop Mockup Image - Responsive Picture */}
             <div className="relative w-[95%] md:w-[90%] z-20">
               <picture>
-                <source srcSet="/laptop-mockup.webp" type="image/webp" />
+                <source
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                  srcSet="/laptop-mockup-mobile.webp"
+                />
+                <source
+                  type="image/webp"
+                  srcSet="/laptop-mockup.webp"
+                />
                 <img 
-                  src="/laptop-mockup.png" 
+                  src="/laptop-mockup-mobile.webp" 
+                  srcSet="/laptop-mockup-mobile.webp 400w, /laptop-mockup.webp 800w"
+                  sizes="(max-width: 767px) 346px, 800px"
                   alt="High Performance Web Development Application Mockup by Built With Purpose" 
                   width="800"
                   height="800"
@@ -138,7 +143,7 @@ const Hero = () => {
               </div>
             </div>
 
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
