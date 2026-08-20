@@ -2,15 +2,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play, Rocket, BarChart3, Clock } from 'lucide-react';
 
 const Hero = () => {
-  const floatAnimation = {
-    y: [-10, 10, -10],
-    transition: {
-      duration: 5,
-      repeat: Infinity,
-      ease: "easeInOut"
-    }
-  };
-
   const avatars = [
     { src: '/avatars/avatar1.svg', alt: 'Client Partner Avatar 1' },
     { src: '/avatars/avatar2.svg', alt: 'Client Partner Avatar 2' },
@@ -34,7 +25,7 @@ const Hero = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="flex flex-col items-start gap-8 z-10"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-blue-100 backdrop-blur-md shadow-sm">
@@ -72,6 +63,7 @@ const Hero = () => {
                     width="40"
                     height="40"
                     loading="eager"
+                    decoding="async"
                     className="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" 
                   />
                 ))}
@@ -85,16 +77,13 @@ const Hero = () => {
 
           {/* Right Content - Laptop Mockup & Floating Cards */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="relative h-[500px] lg:h-[600px] w-full z-10 flex items-center justify-center"
           >
             {/* Main Laptop Mockup Image */}
-            <motion.div 
-              animate={floatAnimation}
-              className="relative w-[95%] md:w-[90%] z-20"
-            >
+            <div className="relative w-[95%] md:w-[90%] z-20">
               <picture>
                 <source srcSet="/laptop-mockup.webp" type="image/webp" />
                 <img 
@@ -104,16 +93,14 @@ const Hero = () => {
                   height="625"
                   loading="eager"
                   fetchPriority="high"
+                  decoding="async"
                   className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
                 />
               </picture>
-            </motion.div>
+            </div>
 
             {/* Floating Card 1: 50+ Projects */}
-            <motion.div 
-              animate={{ y: [10, -10, 10], transition: { duration: 6, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute top-12 -left-4 md:-left-8 w-48 glass-card p-4 z-30"
-            >
+            <div className="absolute top-12 -left-4 md:-left-8 w-48 glass-card p-4 z-30 animate-[bounce_6s_infinite_ease-in-out]">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <Rocket size={24} />
@@ -123,13 +110,10 @@ const Hero = () => {
                   <div className="text-xs text-secondary-text font-medium">Projects Delivered</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating Card 2: SEO Optimised */}
-            <motion.div 
-              animate={{ y: [-15, 15, -15], transition: { duration: 7, repeat: Infinity, ease: "easeInOut" } }}
-              className="absolute bottom-24 -right-4 md:-right-8 w-52 glass-card p-4 z-30"
-            >
+            <div className="absolute bottom-24 -right-4 md:-right-8 w-52 glass-card p-4 z-30 animate-[bounce_7s_infinite_ease-in-out]">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                   <BarChart3 size={24} />
@@ -139,13 +123,10 @@ const Hero = () => {
                   <div className="text-xs text-secondary-text font-medium">Rank higher naturally</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating Card 3: Fast Delivery */}
-            <motion.div 
-              animate={{ y: [12, -12, 12], transition: { duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
-              className="absolute -bottom-2 left-10 md:left-20 w-48 glass-card p-4 z-30"
-            >
+            <div className="absolute -bottom-2 left-10 md:left-20 w-48 glass-card p-4 z-30 animate-[bounce_5s_infinite_ease-in-out]">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
                   <Clock size={24} />
@@ -155,7 +136,7 @@ const Hero = () => {
                   <div className="text-xs text-secondary-text font-medium">Quick turnarounds</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
           </motion.div>
         </div>
