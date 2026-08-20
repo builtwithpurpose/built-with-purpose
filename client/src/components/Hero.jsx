@@ -89,8 +89,8 @@ const Hero = () => {
                 <img 
                   src="/laptop-mockup.png" 
                   alt="High Performance Web Development Application Mockup by Built With Purpose" 
-                  width="1000"
-                  height="625"
+                  width="800"
+                  height="800"
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
