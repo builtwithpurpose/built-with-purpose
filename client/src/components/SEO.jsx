@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { generateRouteSchema } from '../utils/schemaGenerator';
 
 const DEFAULT_TITLE = 'Built With Purpose | Web Development, SEO & UI/UX Company in Coimbatore';
 const DEFAULT_DESCRIPTION = 'Built With Purpose is a premier web development and SEO company in Coimbatore, Tamil Nadu. We build modern React applications, MERN stack solutions, custom website designs, and SEO strategies.';
@@ -16,6 +17,7 @@ const SEO = ({
   schema = null,
 }) => {
   const canonicalUrl = canonicalPath ? `${DOMAIN}${canonicalPath}` : DOMAIN;
+  const finalSchema = schema || generateRouteSchema(canonicalPath, { title, description });
 
   return (
     <Helmet>
@@ -44,9 +46,9 @@ const SEO = ({
       <meta name="twitter:image" content={ogImage} />
 
       {/* JSON-LD Structured Data */}
-      {schema && (
+      {finalSchema && (
         <script type="application/ld+json">
-          {JSON.stringify(schema)}
+          {JSON.stringify(finalSchema)}
         </script>
       )}
     </Helmet>

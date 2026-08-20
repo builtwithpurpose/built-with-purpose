@@ -8,13 +8,15 @@ const Services = () => {
       icon: <Code size={28} />,
       title: 'Web Development Services',
       link: '/web-development',
-      description: 'High-performance React websites, Vite web applications, and custom platforms built to rank high on Google and drive user conversions.',
+      linkText: 'Explore Web Development',
+      description: 'High-performance React websites, Vite web applications, and custom platforms built to rank high on Google and drive user conversions in Coimbatore and beyond.',
       color: 'from-indigo-400 to-blue-600',
     },
     {
       icon: <Search size={28} />,
       title: 'SEO Services in Coimbatore',
       link: '/seo-services',
+      linkText: 'Explore SEO Services',
       description: 'Technical SEO audits, keyword optimization, local search visibility, and high-intent organic growth strategies for Coimbatore businesses.',
       color: 'from-blue-500 to-primary',
     },
@@ -22,6 +24,7 @@ const Services = () => {
       icon: <Palette size={28} />,
       title: 'UI/UX & Website Design',
       link: '/ui-ux-design',
+      linkText: 'Explore UI/UX Design',
       description: 'User-centered interface design, brand identity systems, mobile responsiveness, and high-converting landing page visual layouts.',
       color: 'from-amber-400 to-orange-500',
     },
@@ -29,6 +32,7 @@ const Services = () => {
       icon: <Layers size={28} />,
       title: 'React & MERN Stack Development',
       link: '/react-development',
+      linkText: 'Explore React Development',
       description: 'Scalable full-stack MERN (MongoDB, Express, React, Node) applications designed for rapid execution and seamless security.',
       color: 'from-purple-500 to-secondary',
     },
@@ -36,6 +40,7 @@ const Services = () => {
       icon: <Rocket size={28} />,
       title: 'Small Business & Startup Websites',
       link: '/business-website-development',
+      linkText: 'Explore Business Websites',
       description: 'Affordable, fast-loading, and conversion-focused web solutions crafted specifically for startups and growing enterprises.',
       color: 'from-emerald-400 to-accent',
     },
@@ -100,8 +105,9 @@ const Services = () => {
               <Link 
                 to={service.link} 
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors mt-auto"
+                aria-label={service.linkText}
               >
-                Learn More
+                {service.linkText}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>

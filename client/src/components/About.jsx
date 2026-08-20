@@ -6,32 +6,32 @@ const About = () => {
     {
       icon: <Zap size={24} />,
       title: 'Fast Delivery',
-      description: 'We respect your time. Our agile methodology ensures rapid deployment without compromising on quality.'
+      description: 'We respect your time. Our agile engineering process ensures rapid deployment without compromising code quality.'
     },
     {
       icon: <Search size={24} />,
       title: 'SEO Optimised',
-      description: 'Built with search engines in mind, ensuring your brand ranks higher and attracts organic traffic from day one.'
+      description: 'Built with search engines in mind, ensuring your business ranks higher and attracts organic traffic from day one.'
     },
     {
       icon: <MonitorSmartphone size={24} />,
       title: 'Responsive Design',
-      description: 'Flawless experiences across all devices. Your website will look stunning on desktops, tablets, and mobiles.'
+      description: 'Flawless experiences across all devices. Your website will look stunning on desktops, tablets, and mobile screens.'
     },
     {
       icon: <TrendingUp size={24} />,
       title: 'Scalable Solutions',
-      description: 'Architecture that grows with you. We build robust systems that can handle increased traffic and complexity.'
+      description: 'Architecture that grows with you. We build robust React applications that handle increasing user traffic seamlessly.'
     },
     {
       icon: <HeartHandshake size={24} />,
-      title: 'Lifetime Support',
-      description: 'We are your long-term partners. Enjoy continuous support, updates, and maintenance long after launch.'
+      title: 'Long-term Support',
+      description: 'We are your long-term digital partners, offering ongoing security updates, technical monitoring, and maintenance.'
     },
     {
       icon: <Cpu size={24} />,
       title: 'Modern Technology',
-      description: 'Utilizing the latest tech stack like React, Next.js, and Node.js to deliver high-performance applications.'
+      description: 'Utilizing state-of-the-art tech stacks like React, Vite, and Node.js to deliver enterprise-grade performance.'
     }
   ];
 
@@ -44,7 +44,7 @@ const About = () => {
             Built for <span className="text-gradient">Excellence</span>
           </h2>
           <p className="text-secondary-text text-lg">
-            We combine premium design aesthetics with cutting-edge technology to deliver digital experiences that stand out and perform.
+            We combine premium design aesthetics with cutting-edge React technology to deliver high-ranking digital experiences. As a dedicated web development and SEO company in Coimbatore, Tamil Nadu, we engineer websites for local businesses and global brands alike.
           </p>
         </div>
 

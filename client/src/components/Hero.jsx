@@ -28,12 +28,12 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight text-text">
-              Build Websites That <br className="hidden md:block" />
-              <span className="text-gradient">Grow Your Business</span>
+              Web Development Company <br className="hidden md:block" />
+              <span className="text-gradient">in Coimbatore</span>
             </h1>
             
             <p className="text-lg md:text-xl text-secondary-text max-w-lg leading-relaxed">
-              We craft high-performance websites, React applications, and ROI-driven SEO strategies for ambitious brands in Coimbatore and beyond.
+              We engineer high-performance React websites, custom business web applications, and search-optimized digital platforms for brands in Coimbatore, Tamil Nadu, and globally.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -87,7 +87,7 @@ const Hero = () => {
                   src="/laptop-mockup.webp" 
                   srcSet="/laptop-mockup-mobile.webp 400w, /laptop-mockup.webp 800w"
                   sizes="(max-width: 767px) 346px, 800px"
-                  alt="High Performance Web Development Application Mockup by Built With Purpose" 
+                  alt="Website development project created by Built With Purpose in Coimbatore" 
                   width="800"
                   height="800"
                   loading="eager"
