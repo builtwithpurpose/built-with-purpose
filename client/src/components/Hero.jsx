@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ArrowRight, Play, Rocket, BarChart3, Clock } from 'lucide-react';
 
 const Hero = () => {
@@ -21,13 +20,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Content with subtle entrance animation */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col items-start gap-8 z-10"
-          >
+          {/* Left Content - Instant Paint without opacity:0 delay */}
+          <div className="flex flex-col items-start gap-8 z-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-blue-100 backdrop-blur-md shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
               <span className="text-sm font-medium text-text">Web Development &amp; SEO Company in Coimbatore</span>
@@ -73,9 +67,9 @@ const Hero = () => {
                 Growing companies in Coimbatore &amp; Tamil Nadu
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right Content - Instant paint container (No opacity:0 delay on LCP element) */}
+          {/* Right Content - Instant Paint LCP Mockup without JS render delay */}
           <div className="relative h-[500px] lg:h-[600px] w-full z-10 flex items-center justify-center">
             {/* Main Laptop Mockup Image - Responsive Picture */}
             <div className="relative w-[95%] md:w-[90%] z-20">
@@ -90,7 +84,7 @@ const Hero = () => {
                   srcSet="/laptop-mockup.webp"
                 />
                 <img 
-                  src="/laptop-mockup-mobile.webp" 
+                  src="/laptop-mockup.webp" 
                   srcSet="/laptop-mockup-mobile.webp 400w, /laptop-mockup.webp 800w"
                   sizes="(max-width: 767px) 346px, 800px"
                   alt="High Performance Web Development Application Mockup by Built With Purpose" 
