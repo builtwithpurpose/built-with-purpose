@@ -28,7 +28,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight text-text">
-              Web Development Company <br className="hidden md:block" />
+              Web Development &amp; SEO Company <br className="hidden md:block" />
               <span className="text-gradient">in Coimbatore</span>
             </h1>
             

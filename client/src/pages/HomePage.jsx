@@ -17,9 +17,9 @@ const HomePage = () => {
   return (
     <>
       <SEO
-        title="Web Development Company in Coimbatore | Built With Purpose"
-        description="Web development company in Coimbatore crafting high-performance React websites, UI/UX designs & business SEO solutions. Get your free audit today!"
-        keywords="web development company in Coimbatore, web development services in Coimbatore, website development company in Coimbatore, website development services in Coimbatore, SEO company in Coimbatore, React development company in Coimbatore, business website development in Coimbatore"
+        title="Web Development & SEO Company in Coimbatore | Built With Purpose"
+        description="Built With Purpose is a web development and SEO company in Coimbatore offering business websites, React development, UI/UX design and SEO services."
+        keywords="Web Development Company in Coimbatore, SEO Company in Coimbatore, Website Development Services Coimbatore, React Development Company Coimbatore, Business Website Development Coimbatore, UI UX Design Coimbatore"
         canonicalPath="/"
       />
       <Navbar />

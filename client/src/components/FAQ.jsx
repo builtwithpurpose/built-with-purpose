@@ -5,24 +5,24 @@ import { Plus, Minus } from 'lucide-react';
 const FAQ = () => {
   const faqs = [
     {
-      question: 'What services do you offer?',
-      answer: 'We provide comprehensive digital marketing services including SEO, Social Media Marketing, Paid Advertising, Branding & Graphic Design, Content Marketing, and custom Web & App Development.'
+      question: 'What services does Built With Purpose offer in Coimbatore?',
+      answer: 'We provide custom web development, business website development, React web applications, UI/UX design, and technical SEO services in Coimbatore for startups and growing enterprises.'
     },
     {
-      question: 'How long does a typical project take?',
-      answer: 'Project timelines vary depending on complexity. A standard website redesign might take 4-6 weeks, while a comprehensive branding and digital marketing campaign is usually an ongoing partnership.'
+      question: 'Do you provide web development services in Coimbatore?',
+      answer: 'Yes. Built With Purpose is based in Coimbatore, Tamil Nadu, engineering fast, responsive, and search-optimized websites for local businesses and global brands alike.'
     },
     {
-      question: 'Do you work with startups?',
-      answer: 'Yes! We love working with startups. We help new businesses establish their brand identity, build their digital presence, and scale their customer acquisition rapidly.'
+      question: 'Do you provide SEO services in Coimbatore?',
+      answer: 'Yes! We deliver technical SEO audits, on-page keyword optimization, local search strategy, and Schema.org structured data to help your business rank higher on Google.'
     },
     {
-      question: 'What is your pricing structure?',
-      answer: 'We offer custom quotes based on your specific needs and goals. We believe in transparent pricing and will provide a detailed breakdown during our initial discovery call.'
+      question: 'How long does a typical web development project take?',
+      answer: 'Standard business websites take 3 to 5 weeks from discovery to launch, while complex React web applications take 4 to 8 weeks depending on requirements.'
     },
     {
-      question: 'Will I have a dedicated project manager?',
-      answer: 'Absolutely. Every client is assigned a dedicated project manager who will be your main point of contact, ensuring clear communication and timely delivery throughout the project.'
+      question: 'How can I start a website development or SEO project with Built With Purpose?',
+      answer: 'You can reach out through our contact form or call us directly. We will analyze your project requirements and provide a detailed strategy, estimate, and timeline.'
     }
   ];
 

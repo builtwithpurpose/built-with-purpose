@@ -41,7 +41,7 @@ const About = () => {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Why Choose Us</span>
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-text mb-6">
-            Built for <span className="text-gradient">Excellence</span>
+            Why Choose <span className="text-gradient">Built With Purpose?</span>
           </h2>
           <p className="text-secondary-text text-lg">
             We combine premium design aesthetics with cutting-edge React technology to deliver high-ranking digital experiences. As a dedicated web development and SEO company in Coimbatore, Tamil Nadu, we engineer websites for local businesses and global brands alike.

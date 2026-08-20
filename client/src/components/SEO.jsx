@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { generateRouteSchema } from '../utils/schemaGenerator';
 
-const DEFAULT_TITLE = 'Built With Purpose | Web Development, SEO & UI/UX Company in Coimbatore';
-const DEFAULT_DESCRIPTION = 'Built With Purpose is a premier web development and SEO company in Coimbatore, Tamil Nadu. We build modern React applications, MERN stack solutions, custom website designs, and SEO strategies.';
-const DEFAULT_KEYWORDS = 'web development company in Coimbatore, website development company in Coimbatore, website design company in Coimbatore, SEO services in Coimbatore, web development for small businesses, website development for startups, React development services, business website development';
+const DEFAULT_TITLE = 'Web Development & SEO Company in Coimbatore | Built With Purpose';
+const DEFAULT_DESCRIPTION = 'Built With Purpose is a web development and SEO company in Coimbatore offering business websites, React development, UI/UX design and SEO services.';
+const DEFAULT_KEYWORDS = 'web development company in Coimbatore, SEO company in Coimbatore, website development company in Coimbatore, UI UX design services Coimbatore, React development company Coimbatore, business website development';
 const DOMAIN = 'https://www.builtwithpurpose.in';
 const DEFAULT_OG_IMAGE = `${DOMAIN}/og-image.png`;
 
@@ -16,7 +16,7 @@ const SEO = ({
   ogImage = DEFAULT_OG_IMAGE,
   schema = null,
 }) => {
-  const canonicalUrl = canonicalPath ? `${DOMAIN}${canonicalPath}` : DOMAIN;
+  const canonicalUrl = canonicalPath && canonicalPath !== '/' ? `${DOMAIN}${canonicalPath}` : `${DOMAIN}/`;
   const finalSchema = schema || generateRouteSchema(canonicalPath, { title, description });
 
   return (
