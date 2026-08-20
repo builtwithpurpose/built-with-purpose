@@ -187,10 +187,9 @@ const Grainient = ({
       const mesh = new Mesh(gl, { geometry, program });
       ctxMap.set(container, { renderer, program, mesh });
 
-      const setSize = () => {
-        const rect = container.getBoundingClientRect();
-        const w = Math.max(1, Math.floor(rect.width));
-        const h = Math.max(1, Math.floor(rect.height));
+      const setSize = (width, height) => {
+        const w = Math.max(1, Math.floor(width || container.clientWidth || window.innerWidth));
+        const h = Math.max(1, Math.floor(height || container.clientHeight || window.innerHeight));
         renderer.setSize(w, h);
         const res = program.uniforms.iResolution.value;
         res[0] = gl.drawingBufferWidth;
@@ -198,9 +197,14 @@ const Grainient = ({
         renderer.render({ scene: mesh });
       };
 
-      const ro = new ResizeObserver(setSize);
+      const ro = new ResizeObserver((entries) => {
+        if (entries[0] && entries[0].contentRect) {
+          const { width, height } = entries[0].contentRect;
+          setSize(width, height);
+        }
+      });
       ro.observe(container);
-      setSize();
+      setSize(container.clientWidth, container.clientHeight);
 
       let raf = 0;
       let isVisible = true;

@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" />
   </noscript>
 
-  <!-- Preload Critical LCP Hero Image -->
-  <link rel="preload" as="image" href="/laptop-mockup.webp" type="image/webp" fetchpriority="high" />
+  <!-- Preload Critical LCP Hero Image Responsively -->
+  <link rel="preload" as="image" href="/laptop-mockup-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/laptop-mockup.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" />
 
   <!-- Primary SEO Base Fallback -->
   <title>Built With Purpose | Web Development, SEO & UI/UX Company in Coimbatore</title>
