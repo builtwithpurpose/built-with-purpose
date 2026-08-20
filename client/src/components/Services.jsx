@@ -1,43 +1,43 @@
 import { motion } from 'framer-motion';
-import { Search, Share2, Megaphone, Palette, FileText, Code, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Search, Palette, Code, Layers, Rocket, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
+      icon: <Code size={28} />,
+      title: 'Web Development Services',
+      link: '/web-development',
+      description: 'High-performance React websites, Vite web applications, and custom platforms built to rank high on Google and drive user conversions.',
+      color: 'from-indigo-400 to-blue-600',
+    },
+    {
       icon: <Search size={28} />,
-      title: 'Search Engine Optimization',
-      description: 'Dominate search results, acquire high-intent organic traffic, and scale your leads without recurring ad spend.',
+      title: 'SEO Services in Coimbatore',
+      link: '/seo-services',
+      description: 'Technical SEO audits, keyword optimization, local search visibility, and high-intent organic growth strategies for Coimbatore businesses.',
       color: 'from-blue-500 to-primary',
     },
     {
-      icon: <Share2 size={28} />,
-      title: 'Social Media Marketing',
-      description: 'Build a thriving community, establish brand authority, and maintain stunning feed aesthetics across platforms.',
-      color: 'from-purple-500 to-secondary',
-    },
-    {
-      icon: <Megaphone size={28} />,
-      title: 'Paid Social Advertising',
-      description: 'Scale your revenue fast with high-performance, conversion-optimized campaigns on Meta Ads, Google Ads, and TikTok.',
-      color: 'from-emerald-400 to-accent',
-    },
-    {
       icon: <Palette size={28} />,
-      title: 'Branding & Design',
-      description: 'Establish a memorable identity. We craft premium logos, visual brand books, marketing collaterals, and ad creatives.',
+      title: 'UI/UX & Website Design',
+      link: '/ui-ux-design',
+      description: 'User-centered interface design, brand identity systems, mobile responsiveness, and high-converting landing page visual layouts.',
       color: 'from-amber-400 to-orange-500',
     },
     {
-      icon: <FileText size={28} />,
-      title: 'Content Marketing',
-      description: 'Engage and nurture your prospects with authority copywriting, blog strategy, email marketing funnels, and lead magnets.',
-      color: 'from-rose-400 to-red-500',
+      icon: <Layers size={28} />,
+      title: 'React & MERN Stack Development',
+      link: '/react-development',
+      description: 'Scalable full-stack MERN (MongoDB, Express, React, Node) applications designed for rapid execution and seamless security.',
+      color: 'from-purple-500 to-secondary',
     },
     {
-      icon: <Code size={28} />,
-      title: 'Web & App Development',
-      description: 'High-performance, search-optimized web applications and landing pages designed specifically to load fast and drive conversions.',
-      color: 'from-indigo-400 to-blue-600',
+      icon: <Rocket size={28} />,
+      title: 'Small Business & Startup Websites',
+      link: '/business-website-development',
+      description: 'Affordable, fast-loading, and conversion-focused web solutions crafted specifically for startups and growing enterprises.',
+      color: 'from-emerald-400 to-accent',
     },
   ];
 
@@ -65,7 +65,7 @@ const Services = () => {
             Services That <span className="text-gradient">Drive Growth</span>
           </h2>
           <p className="text-secondary-text text-lg">
-            From strategic brand planning to high-ROI campaigns, we offer comprehensive growth and digital marketing solutions tailored to your business goals.
+            From strategic website design to technical SEO in Coimbatore, we deliver digital solutions tailored to elevate your business.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ const Services = () => {
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="group relative bg-white rounded-2xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-2 border border-border"
+              className="group relative bg-white rounded-2xl p-8 shadow-soft hover:shadow-premium transition-all duration-300 hover:-translate-y-2 border border-border flex flex-col"
             >
               {/* Gradient Top Border Effect */}
               <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl`} />
@@ -93,14 +93,17 @@ const Services = () => {
                 {service.title}
               </h3>
               
-              <p className="text-secondary-text mb-6 line-clamp-3">
+              <p className="text-secondary-text mb-6 line-clamp-3 flex-grow">
                 {service.description}
               </p>
               
-              <a href="#contact" className="inline-flex items-center gap-2 text-text font-semibold hover:text-primary transition-colors">
+              <Link 
+                to={service.link} 
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors mt-auto"
+              >
                 Learn More
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

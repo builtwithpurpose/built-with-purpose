@@ -11,10 +11,17 @@ const Hero = () => {
     }
   };
 
+  const avatars = [
+    { src: '/avatars/avatar1.svg', alt: 'Client Partner Avatar 1' },
+    { src: '/avatars/avatar2.svg', alt: 'Client Partner Avatar 2' },
+    { src: '/avatars/avatar3.svg', alt: 'Client Partner Avatar 3' },
+    { src: '/avatars/avatar4.svg', alt: 'Client Partner Avatar 4' },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-gradient-to-br from-white to-blue-50/50" id="home">
       {/* Background Subtle Abstract Shapes */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10" aria-hidden="true">
         <div className="absolute top-[10%] -left-[5%] w-[40%] h-[40%] rounded-full bg-blue-400/10 blur-[100px]" />
         <div className="absolute top-[30%] -right-[10%] w-[50%] h-[50%] rounded-[100px] rotate-45 bg-blue-300/10 blur-[120px]" />
         <div className="absolute -bottom-[20%] left-[20%] w-[60%] h-[40%] rounded-full bg-indigo-300/10 blur-[100px]" />
@@ -31,8 +38,8 @@ const Hero = () => {
             className="flex flex-col items-start gap-8 z-10"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-blue-100 backdrop-blur-md shadow-sm">
-              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="text-sm font-medium text-text">Premium Web Studio</span>
+              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
+              <span className="text-sm font-medium text-text">Web Development &amp; SEO Company in Coimbatore</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight text-text">
@@ -41,7 +48,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-secondary-text max-w-lg leading-relaxed">
-              We craft high-performance, beautifully designed digital experiences that drive real results for ambitious brands and startups.
+              We craft high-performance websites, React applications, and ROI-driven SEO strategies for ambitious brands in Coimbatore and beyond.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -57,18 +64,26 @@ const Hero = () => {
 
             <div className="flex items-center gap-6 pt-4 border-t border-border/50 w-full mt-2">
               <div className="flex -space-x-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <img key={i} src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" />
+                {avatars.map((av, i) => (
+                  <img 
+                    key={i} 
+                    src={av.src} 
+                    alt={av.alt} 
+                    width="40"
+                    height="40"
+                    loading="eager"
+                    className="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" 
+                  />
                 ))}
               </div>
               <div className="text-sm text-secondary-text font-medium">
                 <span className="text-text font-bold block">Trusted by 50+</span>
-                Growing companies
+                Growing companies in Coimbatore &amp; Tamil Nadu
               </div>
             </div>
           </motion.div>
 
-          {/* Right Content - Mockup & Stats */}
+          {/* Right Content - Laptop Mockup & Floating Cards */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -80,11 +95,18 @@ const Hero = () => {
               animate={floatAnimation}
               className="relative w-[95%] md:w-[90%] z-20"
             >
-              <img 
-                src="/laptop-mockup.png" 
-                alt="Premium Laptop Mockup" 
-                className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
-              />
+              <picture>
+                <source srcSet="/laptop-mockup.webp" type="image/webp" />
+                <img 
+                  src="/laptop-mockup.png" 
+                  alt="High Performance Web Development Application Mockup by Built With Purpose" 
+                  width="1000"
+                  height="625"
+                  loading="eager"
+                  fetchPriority="high"
+                  className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+                />
+              </picture>
             </motion.div>
 
             {/* Floating Card 1: 50+ Projects */}

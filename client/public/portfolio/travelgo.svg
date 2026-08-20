@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="travel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065F46"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <linearGradient id="travel-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#travel-bg)"/>
+  <!-- Map & Itinerary UI Mockup -->
+  <rect x="50" y="40" width="700" height="380" rx="16" fill="#047857"/>
+  <circle cx="200" cy="200" r="80" fill="url(#travel-accent)" opacity="0.6"/>
+  <path d="M 120 300 Q 250 150 400 250 T 680 180" stroke="#FDE047" stroke-width="5" stroke-dasharray="10 5" fill="none"/>
+  <text x="400" y="480" font-family="sans-serif" font-size="16" fill="#A7F3D0" text-anchor="middle">TravelGo Dynamic Booking &amp; Travel App</text>
+</svg>

@@ -197,6 +197,7 @@ const Team = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           title={platform}
+                          aria-label={`Follow ${member.name} on ${platform}`}
                           className="social-icon"
                           // Prevent drag from intercepting clicks
                           onPointerDown={(e) => e.stopPropagation()}

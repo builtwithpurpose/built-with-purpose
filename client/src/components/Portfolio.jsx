@@ -7,21 +7,24 @@ const Portfolio = () => {
       id: 'finova',
       title: 'Finova Dashboard',
       description: 'A high-performance fintech dashboard with real-time data visualization and secure payment processing capabilities.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000',
+      image: '/portfolio/finova.svg',
+      alt: 'Finova Fintech Dashboard Web Application Design',
       tags: ['React', 'Node.js', 'Tailwind CSS'],
     },
     {
       id: 'shopease',
       title: 'ShopEase E-Commerce',
       description: 'A modern e-commerce platform featuring seamless checkout, inventory management, and personalized recommendations.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
+      image: '/portfolio/shopease.svg',
+      alt: 'ShopEase E-Commerce Website Development Platform',
       tags: ['Next.js', 'Stripe', 'Framer Motion'],
     },
     {
       id: 'travelgo',
       title: 'TravelGo App',
       description: 'An elegant travel booking application with interactive maps, itinerary planning, and social sharing features.',
-      image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=1000',
+      image: '/portfolio/travelgo.svg',
+      alt: 'TravelGo Booking Web Application UI UX Design',
       tags: ['React Native', 'GraphQL', 'AWS'],
     },
   ];
@@ -35,7 +38,7 @@ const Portfolio = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-secondary-text text-lg">
-            A showcase of our finest work, combining beautiful design with robust engineering.
+            A showcase of our finest web development, SEO, and UI/UX engineering projects delivered for clients in Coimbatore and across India.
           </p>
         </div>
 
@@ -53,7 +56,10 @@ const Portfolio = () => {
               <div className="relative h-60 overflow-hidden bg-gray-200">
                 <img 
                   src={project.image} 
-                  alt={project.title} 
+                  alt={project.alt} 
+                  width="800"
+                  height="500"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -81,7 +87,7 @@ const Portfolio = () => {
                   href="#contact" 
                   className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-white border border-border text-text font-button font-semibold rounded-xl hover:bg-background hover:border-primary/30 hover:text-primary transition-all duration-300"
                 >
-                  Visit Website
+                  Start Similar Project
                   <ExternalLink size={18} />
                 </a>
               </div>
